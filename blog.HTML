@@ -3,109 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Blog</title>
+    <title>Gadie Styles Form</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #e9ecef;
+            padding: 20px;
+            height: 100vh;
+            background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+        }
+        .form-container {
+            max-width: 400px; /* Smaller width */
+            margin: auto;
+            background: rgba(255, 255, 255, 0.8); /* Light, semi-transparent white background */
+            padding: 50px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            font-family: 'Georgia', serif; /* Appealing font for heading */
             color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        header {
-            background-color: #007bff; /* Blue */
-            width: 100%;
-            padding: 15px 0;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        nav a {
-            margin: 0 20px;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
+        .form-group {
+            margin-bottom: 15px;
         }
-        nav a:hover {
-            color: #ffc107; /* Amber */
+        label {
+            display: block;
+            margin-bottom: 5px;
         }
-        .container {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        textarea,
+        select {
             width: 100%;
-            max-width: 1200px;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px; /* Padding for better spacing */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f9f9f9; /* Light gray background for inputs */
         }
-        .passport {
-            flex: 1;
+        .gender-group {
             display: flex;
-            justify-content: center;
-            align-items: center;
+            gap: 15px; /* Space between radio buttons */
         }
-        .passport img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 3px solid #007bff; /* Blue */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff; /* Blue color */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
         }
-        .about {
-            flex: 2;
-            padding: 20px;
-            line-height: 1.6;
-        }
-        .about h2 {
-            color: #007bff; /* Blue */
-        }
-        .extra {
-            flex: 1;
-            padding: 20px;
-            background-color: #f1f3f5; /* Light gray */
-            border-left: 2px solid #007bff; /* Blue */
-        }
-        .extra h3 {
-            color: #007bff; /* Blue */
-        }
-        @media (max-width: 600px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .passport, .about, .extra {
-                width: 100%;
-                margin: 10px 0;
-            }
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#blog">Blog</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-    <div class="container">
-        <div class="passport">
-            <img src="passport.jpg" alt="Passport Size Image">
+
+<div class="form-container">
+    <h2>Contact Us at Gadie Styles</h2>
+    <form>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
         </div>
-        <div class="about">
-            <h2>About Me</h2>
-            <p>My name is Agu David (21CN029557), and I am currently studying Computer Engineering at Covenant University. I have a passion for technology and programming, and I enjoy exploring new innovations in the field. My academic journey has equipped me with foundational skills in software development, hardware design, and systems analysis. In my free time, I love to work on personal projects, contribute to open-source initiatives, and stay updated with the latest tech trends.</p>
+        
+        <div class="form-group">
+            <label>Gender:</label>
+            <div class="gender-group">
+                <label>
+                    <input type="radio" name="gender" value="male" required> Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female"> Female
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="other"> Other
+                </label>
+            </div>
         </div>
-        <div class="extra">
-            <h3>Additional Information</h3>
-            <p>Outside of academia, I am interested in gaming, photography, and traveling. I believe in continuous learning and am always looking for opportunities to expand my knowledge and skills. Feel free to connect with me on social media or check out my projects on GitHub!</p>
+        
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="date" id="age" name="age" required>
         </div>
-    </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
 </body>
 </html>
