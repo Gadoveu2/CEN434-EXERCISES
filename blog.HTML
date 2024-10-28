@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Blog</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e9ecef;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            background-color: #007bff; /* Blue */
+            width: 100%;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            margin: 0 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffc107; /* Amber */
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .passport {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .passport img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #007bff; /* Blue */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .about {
+            flex: 2;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .about h2 {
+            color: #007bff; /* Blue */
+        }
+        .extra {
+            flex: 1;
+            padding: 20px;
+            background-color: #f1f3f5; /* Light gray */
+            border-left: 2px solid #007bff; /* Blue */
+        }
+        .extra h3 {
+            color: #007bff; /* Blue */
+        }
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .passport, .about, .extra {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="passport">
+            <img src="passport.jpg" alt="Passport Size Image">
+        </div>
+        <div class="about">
+            <h2>About Me</h2>
+            <p>My name is Agu David (21CN029557), and I am currently studying Computer Engineering at Covenant University. I have a passion for technology and programming, and I enjoy exploring new innovations in the field. My academic journey has equipped me with foundational skills in software development, hardware design, and systems analysis. In my free time, I love to work on personal projects, contribute to open-source initiatives, and stay updated with the latest tech trends.</p>
+        </div>
+        <div class="extra">
+            <h3>Additional Information</h3>
+            <p>Outside of academia, I am interested in gaming, photography, and traveling. I believe in continuous learning and am always looking for opportunities to expand my knowledge and skills. Feel free to connect with me on social media or check out my projects on GitHub!</p>
+        </div>
+    </div>
+</body>
+</html>
