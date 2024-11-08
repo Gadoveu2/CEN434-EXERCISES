@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combination Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Combination Calculator</h1>
+    <button onclick="calculateCombinations()">Calculate Combinations</button>
+    <div id="result"></div>
+
+    <script>
+        function factorial(n) {
+            if (n === 0 || n === 1) {
+                return 1;
+            }
+            let result = 1;
+            for (let i = 2; i <= n; i++) {
+                result *= i;
+            }
+            return result;
+        }
+
+        function combination(n, r) {
+            if (r > n) {
+                return 0; // C(n, r) is 0 if r > n
+            }
+            return factorial(n) / (factorial(r) * factorial(n - r));
+        }
+
+        function calculateCombinations() {
+            const x = 5;
+            const y = 7;
+
+            let resultText = '';
+
+            // Case 1: x > y
+            if (x > y) {
+                resultText += `C(${x}, ${y}) = ${combination(x, y)}<br>`;
+            }
+
+            // Case 2: y > x
+            if (y > x) {
+                resultText += `C(${y}, ${x}) = ${combination(y, x)}<br>`;
+            }
+
+            // Case 3: x = y
+            if (x === y) {
+                resultText += `C(${x + 1}, ${y}) = ${combination(x + 1, y)}<br>`;
+            }
+
+            // Specific case: C(5, 7)
+            resultText += `C(5, 7) = ${combination(5, 7)}<br>`;
+
+            document.getElementById('result').innerHTML = resultText;
+        }
+    </script>
+</body>
+</html>
